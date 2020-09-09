@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 
 const LoginPage = () => (
   <Layout>
+    <SEO title="Login" />
     <h1>Login</h1>
 
   </Layout>
