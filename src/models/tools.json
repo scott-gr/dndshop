@@ -1,35 +1,213 @@
-Alchemist's supplies      50 gp   8 lb.  
-Brewer's supplies         20 gp   9 lb.  
-Calligrapher's supplies   10 gp   5 lb.  
-Carpenter's tools         8 gp    6 lb.  
-Cartographer's tools      15 gp   6 lb.  
-Cobbler's tools           5 gp    5 lb.  
-Cook's utensils           1 gp    8 lb.  
-Glassblower's tools       30 gp   5 lb.  
-Jeweler's tools           25 gp   2 lb.  
-Leatherworker's tools     5 gp    5 lb.  
-Mason's tools             10 gp   8 lb.  
-Painter's supplies        10 gp   5 lb.  
-Potter's tools            10 gp   3 lb.  
-Smith's tools             20 gp   8 lb.  
-Tinker's tools            50 gp   10 lb. 
-Weaver's tools            1 gp    5 lb.  
-Woodcarver's tools        1 gp    5 lb.  
-Disguise kit                25 gp   3 lb.  
-Forgery kit                 15 gp   5 lb.  
-Dice set                  1 sp    -      
-Playing card set          5 sp    -      
-Herbalism kit               5 gp    3 lb.
-Bagpipes                  30 gp   6 lb.  
-Drum                      6 gp    3 lb.  
-Dulcimer                  25 gp   10 lb. 
-Flute                     2 gp    1 lb.  
-Lute                      35 gp   2 lb.  
-Lyre                      30 gp   2 lb.  
-Horn                      3 gp    2 lb.  
-Pan flute                 12 gp   2 lb.  
-Shawm                     2 gp    1 lb.  
-Viol                      30 gp   1 lb.  
-Navigator's tools           25 gp   2 lb.  
-Poisoner's kit              50 gp   2 lb.  
-Thieves' tools              25 gp   1 lb.  
+[
+  {
+    "id": "alchemists_supplies",
+    "name":"Alchemist's supplies",
+    "price":"50 gp",
+    "weight":"8"
+  },
+  {
+    "id": "brewers_supplies",
+    "name":"Brewer's supplies",
+    "price":"20 gp",
+    "weight":"9"
+  },
+  {
+    "id": "calligraphers_supplies",
+    "name":"Calligrapher's supplies ",
+    "price":"15 gp",
+    "weight":"6"
+  },
+  {
+    "id": "carpenters_tools",
+    "name":"Carpenter's tools",
+    "price":"50 gp",
+    "weight":"8"
+  },
+  {
+    "id": "cartographers_tools",
+    "name":"Cartographer's tools ",
+    "price":"50 gp",
+    "weight":"8"
+  },
+  {
+    "id": "cobblers_tools",
+    "name":"Cobbler's tools ",
+    "price":"5 gp",
+    "weight":"5"
+  },
+  {
+    "id": "cooks_utensils",
+    "name":"Cook's utensils",
+    "price":"1 gp",
+    "weight":"8"
+  },
+  {
+    "id": "glassblowers_tools",
+    "name":"Glassblower's tools",
+    "price":"30 gp",
+    "weight":"5"
+  },
+  {
+    "id": "jewelers_tools",
+    "name":"Jewel's tools",
+    "price":"25 gp",
+    "weight":"2"
+  },
+  {
+    "id": "leatherworkers_tools",
+    "name":"Leatherworker's tools",
+    "price":"5 gp",
+    "weight":"5"
+  },
+  {
+    "id": "masons_tools",
+    "name":"Mason's tools",
+    "price":"10 gp",
+    "weight":"8"
+  },
+  {
+    "id": "painters_supplies",
+    "name":"Painter's supplies",
+    "price":"10 gp",
+    "weight":"8"
+  },
+  {
+    "id": "potters_tools",
+    "name":"Potter's tools",
+    "price":"10 gp",
+    "weight":"3"
+  },
+  {
+    "id": "smiths_tools",
+    "name":"Smith's tools",
+    "price":"20 gp",
+    "weight":"8"
+  },
+  {
+    "id": "weavers_tools",
+    "name":"Weaver's tools",
+    "price":"1 gp",
+    "weight":"5"
+  },
+  {
+    "id": "tinkers_tools",
+    "name":"Tinker's tools",
+    "price":"50 gp",
+    "weight":"10"
+  },
+  {
+    "id": "woodcarvers_tools",
+    "name":"Woodcarver's tools",
+    "price":"1 gp",
+    "weight":"5"
+  },
+  {
+    "id": "navigators_tools",
+    "name":"Navigator's tools",
+    "price":"25 gp",
+    "weight":"2"
+  },
+  {
+    "id": "thieves_tools",
+    "name":"Thieves' tools",
+    "price":"25 gp",
+    "weight":"1"
+  },
+  {
+    "id": "disguise_kit",
+    "name":"Disguise kit",
+    "price":"25 gp",
+    "weight":"3"
+  },
+  {
+    "id": "forgery_kit",
+    "name":"Forgery kit",
+    "price":"15 gp",
+    "weight":"5"
+  },
+  {
+    "id": "herbalism_kit",
+    "name":"Herbalism kit",
+    "price":"5 gp",
+    "weight":"3"
+  },
+  {
+    "id": "poisoners_kit",
+    "name":"Poisoner's kit",
+    "price":"50 gp",
+    "weight":"2"
+  },
+  {
+    "id": "dice",
+    "name":"Dice",
+    "price":"1 sp",
+    "weight":"0"
+  },
+  {
+    "id": "playing_card_set",
+    "name":"Playing card set",
+    "price":"5 sp",
+    "weight":"0"
+  },
+  {
+    "id": "dice",
+    "name":"Dice",
+    "price":"1 sp",
+    "weight":"0"
+  },
+  {
+    "id": "bagpipes",
+    "name":"Bagpipes",
+    "price":"30 gp",
+    "weight":"6"
+  },
+  {
+    "id": "drum",
+    "name":"Drum",
+    "price":"6 gp",
+    "weight":"3"
+  },
+  {
+    "id": "dulcimer",
+    "name":"Dulcimer",
+    "price":"25 gp",
+    "weight":"10"
+  },
+  {
+    "id": "flute",
+    "name":"Flute",
+    "price":"2 gp",
+    "weight":"1"
+  },
+  {
+    "id": "lute",
+    "name":"Lute",
+    "price":"35 gp",
+    "weight":"2"
+  },
+  {
+    "id": "lyre",
+    "name":"Lyre",
+    "price":"30 gp",
+    "weight":"2"
+  },
+  {
+    "id": "horn",
+    "name":"Horn",
+    "price":"3 gp",
+    "weight":"2"
+  },
+  {
+    "id": "pan_flute",
+    "name":"Pan flute",
+    "price":"12 gp",
+    "weight":"2"
+  },
+  {
+    "id": "Shawm",
+    "name":"shawm",
+    "price":"12 gp",
+    "weight":"2"
+  }
+]
+
