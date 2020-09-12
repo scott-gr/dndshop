@@ -6,26 +6,22 @@ import Image from "../components/image";
 import SEO from "../components/seo";
 import styles from "./index.module.css";
 
+//Large dashboard button
 const DashBtn = props => (
-	<button className={styles.dashbtn}>
+	<Link className={styles.dashbtn} to={props.to}>
 		<span>
-			<img src={props.dashicon} className={styles.dashicon} alt="button icon" />
+			<img src={props.dashicon} className={styles.dashicon} alt={props.alt} />
 		</span>
 		<span className={styles.dashbtntxt}>{props.dashbtntxt}</span>
-	</button>
+	</Link>
 );
 
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-
 		<main className={styles.buttons}>
-
-			<DashBtn dashicon="" dashbtntxt="Party" />
-			<Link to="/shops/"><DashBtn dashicon="" dashbtntxt="Shops" /></Link>
-			
-
-
+			<DashBtn dashicon="" dashbtntxt="Party" to="/party/" alt="party icon" />
+			<DashBtn dashicon="" dashbtntxt="Shops" to="/shops/" alt="shop icon" />
 		</main>
 	</Layout>
 );

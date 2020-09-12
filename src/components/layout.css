@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
 :root {
 --red: #9d0a0eff;
 --orange: #c18c5dff;
@@ -13,4 +15,5 @@
 
 html {
   background-color: var(--white);
+  font-family: 'Open Sans', sans-serif;
 }
