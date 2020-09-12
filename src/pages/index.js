@@ -9,11 +9,7 @@ import styles from "./index.module.css";
 const DashBtn = props => (
 	<button className={styles.dashbtn}>
 		<span>
-			<img
-				src={props.dashicon}
-				className={styles.dashicon}
-				alt="button icon"
-			/>
+			<img src={props.dashicon} className={styles.dashicon} alt="button icon" />
 		</span>
 		<span className={styles.dashbtntxt}>{props.dashbtntxt}</span>
 	</button>
@@ -22,9 +18,14 @@ const DashBtn = props => (
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-		<main>
-			<DashBtn dashicon="" dashbtntxt="My Party" />
-			<DashBtn dashicon="" dashbtntxt="Stores" />
+
+		<main className={styles.buttons}>
+
+			<DashBtn dashicon="" dashbtntxt="Party" />
+			<Link to="/shops/"><DashBtn dashicon="" dashbtntxt="Shops" /></Link>
+			
+
+
 		</main>
 	</Layout>
 );

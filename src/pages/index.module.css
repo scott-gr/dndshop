@@ -1,11 +1,32 @@
+
+.buttons {
+  height:80vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
 .dashbtn {
 
+  height: 40%;
+  min-height: fit-content;
+  width: 40%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: none;
+	background: linear-gradient(145deg, #fffffd, #e0ded4);
+	box-shadow: 20px 20px 60px #bdbcb3, -20px -20px 60px #ffffff;
 }
 
 .dashbtntxt {
-
+  font-size:400%;
+  color:var(--grey)
 }
 
 .dashicon {
-  
 }

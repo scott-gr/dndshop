@@ -1,0 +1,16 @@
+:root {
+--red: #9d0a0eff;
+--orange: #c18c5dff;
+--white: #f9f7ecff;
+--grey: #5a5a5aff;
+--black: #0b0b0bff;
+}
+
+/* use color names
+#element {
+  color: var(--color);
+} */
+
+html {
+  background-color: var(--white);
+}
