@@ -1,0 +1,10 @@
+[
+  {
+    "id": "",
+    "name": "",
+    "price": "",
+    "speed": "",
+    "carrying-capacity":""
+  }
+]
+(table)**\n\n| Item           | Cost   | Speed  | Carrying Capacity |\n|----------------|--------|--------|-------------------|\n| Camel          | 50 gp  | 50 ft. | 480 lb.           |\n| Donkey or mule | 8 gp   | 40 ft. | 420 lb.           |\n| Elephant       | 200 gp | 40 ft. | 1,320 lb.         |\n| Horse, draft   | 50 gp  | 40 ft. | 540 lb.           |\n| Horse, riding  | 75 gp  | 60 ft. | 480 lb.           |\n| Mastiff        | 25 gp  | 40 ft. | 195 lb.           |\n| Pony           | 30 gp  | 40 ft. | 225 lb.           |\n| Warhorse       | 400 gp | 60 ft. | 540 lb.           |\n\n**Tack, Harness, and Drawn Vehicles (table)**\n\n| Item               | Cost   | Weight  |\n|--------------------|--------|---------|\n| Barding            | ×4     | ×2      |\n| Bit and bridle     | 2 gp   | 1 lb.   |\n| Carriage           | 100 gp | 600 lb. |\n| Cart               | 15 gp  | 200 lb. |\n| Chariot            | 250 gp | 100 lb. |\n| Feed (per day)     | 5 cp   | 10 lb.  |\n| **_Saddle_**       |        |         |\n| - Exotic           | 60 gp  | 40 lb.  |\n| - Military         | 20 gp  | 30 lb.  |\n| - Pack             | 5 gp   | 15 lb.  |\n| - Riding           | 10 gp  | 25 lb.  |\n| Saddlebags         | 4 gp   | 8 lb.   |\n| Sled               | 20 gp  | 300 lb. |\n| Stabling (per day) | 5 sp   | -       |\n| Wagon              | 35 gp  | 400 lb. |\n\n**Waterborne Vehicles (table)**\n\n| Item         | Cost      | Speed  |\n|--------------|-----------|--------|\n| Galley       | 30,000 gp | 4 mph  |\n| Keelboat     | 3,000 gp  | 1 mph  |\n| Longship     | 10,000 gp | 3 mph  |\n| Rowboat      | 50 gp     | 1½ mph |\n| Sailing ship | 10,000 gp | 2 mph  |\n| Warship      | 25,000 gp | 2½ mph |\n",
