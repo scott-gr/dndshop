@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&display=swap");
+
+:root {
+	--red: #9d0a0eff;
+	--orange: #c18c5dff;
+	--white: #f9f7ecff;
+	--grey: #5a5a5aff;
+	--black: #0b0b0bff;
+}
+
+/* use color names
+#element {
+  color: var(--color);
+} */
+
+html {
+	background-color: var(--white);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+	border-radius: 20px;
+	background: #f9f7ec;
+	box-shadow: inset 8px 8px 0px #dbd9d0, inset -2px -2px 0px #ffffff;
+  border: none;
+  display:block;
+}
+/* needs a font */
+
+input,
+select {
+  height: 40px;
+  padding-left: 15px;
+}
+
+textarea {
+  padding:12px;
+}
+
+button {
+	border: none;
+	border-radius: 50px;
+	background: linear-gradient(145deg, #fffffd, #e0ded4);
+	box-shadow: 8px 8px 0px #c5c3ba, -2px -2px 0px #ffffff;
+	height: 30px;
+	font-weight: bold;
+	font-size: larger;
+	color: var(--red);
+}

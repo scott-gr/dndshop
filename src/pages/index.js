@@ -4,16 +4,25 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
+import styles from "./index.module.css";
+
+//Large dashboard button
+const DashBtn = props => (
+	<Link className={styles.dashbtn} to={props.to}>
+		<span>
+			<img src={props.dashicon} className={styles.dashicon} alt={props.alt} />
+		</span>
+		<span className={styles.dashbtntxt}>{props.dashbtntxt}</span>
+	</Link>
+);
 
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-			<Image />
-		</div>
+		<main className={styles.buttons}>
+			<DashBtn dashicon="" dashbtntxt="Party" to="/party/" alt="party icon" />
+			<DashBtn dashicon="" dashbtntxt="Shops" to="/shops/" alt="shop icon" />
+		</main>
 	</Layout>
 );
 
