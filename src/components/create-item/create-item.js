@@ -11,7 +11,9 @@ class CreateItem extends Component {
 
 	render() {
 		return (
+      
 			<form>
+        <h2>Create New Item</h2>
 				<label>
 					Item Name
 					<input type="text" name="itemName" />
@@ -27,7 +29,15 @@ class CreateItem extends Component {
           <option value="expense">expense</option>
           <option value="other">other</option>
 				</select>
-				<button type="submit">Create Item</button>
+        <textarea name="itemDescription" value={this.state.itemDescription} onChange={this.handleChange} rows="8" cols="30">This item protects you from mosquitos.</textarea>
+				<label id="reqAttunementLabel">Requires Attunement?</label>
+        <select value={this.state.value} onChange={this.handleChange} id="reqAttunement" name="reqAttunement">
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+          <option value="yesSpecific">yes, by a...</option>
+        </select>
+        <input type="text" name="specificAttune" id="specific-attune" />
+        <button type="submit">Create Item</button>
 			</form>
 		);
 	}

@@ -1,35 +1,31 @@
-
 .buttons {
-  height:80vh;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-
+	height: 80vh;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .dashbtn {
-
-  height: 40%;
-  min-height: 250px;
-  width: 40%;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  justify-content: space-around;
-  flex-direction: column;
-  border: none;
+	height: 40%;
+	min-height: 250px;
+	width: 40%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	justify-content: space-around;
+	flex-direction: column;
+	border: none;
+	border-radius: 50px;
+	border-radius: 50px;
 	background: linear-gradient(145deg, #fffffd, #e0ded4);
-	box-shadow: 20px 20px 60px #bdbcb3, -20px -20px 60px #ffffff;
+	box-shadow: 20px 20px 0px #c5c3ba, -5px -5px 0px #ffffff;
 }
 
 .dashbtntxt {
-  font-size:400%;
-  color:var(--grey);
-
+	font-size: 400%;
+	color: var(--grey);
 }
 
 .dashicon {
 }
-
