@@ -16,7 +16,8 @@
     "gatsby-source-filesystem": "^2.3.28",
     "gatsby-source-mongodb": "^2.3.11",
     "gatsby-transformer-sharp": "^2.5.14",
-    "prop-types": "^15.7.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
@@ -39,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/scott-gr/dndshop"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

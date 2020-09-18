@@ -1,29 +1,26 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
+import { getUser, isLoggedIn } from "../services/auth"
 
-import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
-import styles from "./index.module.css";
+import Layout from "../components/layout"
 
-//Large dashboard button
-const DashBtn = props => (
-	<Link className={styles.dashbtn} to={props.to}>
-		<span>
-			<img src={props.dashicon} className={styles.dashicon} alt={props.alt} />
-		</span>
-		<span className={styles.dashbtntxt}>{props.dashbtntxt}</span>
-	</Link>
-);
-
-const IndexPage = () => (
-	<Layout>
-		<SEO title="Home" />
-		<main className={styles.buttons}>
-			<DashBtn dashicon="" dashbtntxt="Party" to="/party/" alt="party icon" />
-			<DashBtn dashicon="" dashbtntxt="Shops" to="/shops/" alt="shop icon" />
-		</main>
-	</Layout>
-);
-
-export default IndexPage;
+export default function Home() {
+  return (
+    <Layout>
+      <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+      <p>
+        {isLoggedIn() ? (
+          <>
+            You are logged in, so check your{" "}
+            <Link to="/app/profile">profile</Link>
+          </>
+        ) : (
+          <>
+            You should <Link to="/app/login">log in</Link> to see restricted
+            content
+          </>
+        )}
+      </p>
+    </Layout>
+  )
+}
