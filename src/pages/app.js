@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Profile from "../components/profile";
 import PrivateRoute from "../components/privateRoute";
 import Login from "../components/login";
+import { Mongoose } from "mongoose";
 
 const App = () => (
 	<Layout>
