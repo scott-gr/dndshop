@@ -18,8 +18,8 @@ const UserSchema = new mongoose.Schema({
     enum : ['dm', 'player'],
     required : true
   },
-  group : {
-    type : String,
+  groupId : {
+    type : Number,
     
   }
   }
