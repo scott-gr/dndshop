@@ -70,42 +70,74 @@ const itemSchema = new Schema({
 		max: {
 			type: Number,
 		},
-  },
-  damage_dice : {
-    required: function () {
+	},
+	damage_dice: {
+		required: function () {
 			return this.category === "weapon";
-    },
-    type: String
-  },
-  damage_type : {
-    required: function () {
+		},
+		type: String,
+	},
+	damage_type: {
+		required: function () {
 			return this.category === "weapon";
-    },
-    type: String,
-    enum: ["piercing", "bludgeoning", "slashing", "acid",  "cold", "fire", "force", "lightning", "necrotic", "poison", "psychic", "radiant", "thunder"],
-  },
-  properties : {
-    required: function () {
+		},
+		type: String,
+		enum: [
+			"piercing",
+			"bludgeoning",
+			"slashing",
+			"acid",
+			"cold",
+			"fire",
+			"force",
+			"lightning",
+			"necrotic",
+			"poison",
+			"psychic",
+			"radiant",
+			"thunder",
+		],
+	},
+	properties: {
+		required: function () {
 			return this.category === "weapon";
+		},
+		type: String,
+		enum: [
+			"ammunition",
+			"finesse",
+			"heavy",
+			"light",
+			"loading",
+			"range",
+			"reach",
+			"special",
+			"thrown",
+			"two-handed",
+			"verstile",
+			"improvised",
+			"silvered",
+		],
+  },
+  speed: {
+		required: function () {
+			return this.category === "mount/vehicle";
+		},
+		type: Number,
+  },
+  carrying_capacity: {
+		required: function () {
+			return this.category === "mount/vehicle";
+		},
+		type: Number,
+  },
+  requires_attunement: {
+    required: function () {
+			return this.category === "magic item";
     },
-    type: String,
-    enum: []
+    type: Boolean
   }
 });
 
-// name: name,
-// type: type,
-// desc: desc,
-// price: price,
-// rarity: rarity,
-// ac: ac,
-// weight: weight,
-// modifier: modifier,
-// damage_dice: damage_dice,
-// damage_type: damage_type,
-// properties: properties,
-// requires_attunement: requires_attunement,
-// speed: speed,
-// carrying_capacity: carrying_capacity
 
 module.exports = mongoose.model("Item", itemSchema, "Items");
