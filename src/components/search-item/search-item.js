@@ -25,9 +25,11 @@ class SearchItem extends Component {
 					<option value="armor">armor</option>
 					<option value="weapon">weapon</option>
 					<option value="tool">tool</option>
-					<option value="magic-item">magic item</option>
+					<option value="magic item">magic item</option>
 					<option value="gear">gear</option>
-					<option value="mount-vehicle">mounts & vehicles</option>
+					<option value="mount/vehicle">mounts & vehicles</option>
+					<option value="trade good">trade good</option>
+					<option value="food and drink">food and drink</option>
 					<option value="expense">expense</option>
 				</select>
 				<label>
