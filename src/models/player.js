@@ -1,7 +1,14 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
-const PlayerSchema = new mongoose.Schema({
+
+const PlayerSchema = new Schema({
+  username: {
+		type: String,
+		required: true,
+		min: 6,
+		max: 20,
+  },
   characterName:{
     type : String,
     required : true,
@@ -11,7 +18,35 @@ const PlayerSchema = new mongoose.Schema({
   groupId:{
     type : Number,
     required : true,
-    
+  },
+  money:{
+    platinum: {
+      type: Number,
+      min : 0,
+      max : 100000000,
+    },
+    gold: {
+      type: Number,
+      min : 0,
+      max : 100000000,
+    },
+    electrum: {
+      type: Number,
+      min : 0,
+      max : 100000000,
+    },
+    silver: {
+      type: Number,
+      min : 0,
+      max : 100000000,
+    },
+    copper: {
+      type: Number,
+      min : 0,
+      max : 100000000,
+    },
   }
 
 })
+
+module.exports = mongoose.model("Player", PlayerSchema, "Players");
