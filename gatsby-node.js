@@ -1,16 +1,7 @@
-const path = require('path')
+import Express from 'express'
 
-exports.onCreatePage = async ({ page, actions : {createPage}}) => {
-  if (page.path.match(/^\/app/)) {
-    page.matchPath = "/app/*"
-    createPage(page)
-  }
-}
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
+exports.onCreateDevServer = ({ Express }) => {
+  app.get('/hello', function (req, res) {
+    res.send('hello world')
   })
 }
