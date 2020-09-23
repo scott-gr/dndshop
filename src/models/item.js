@@ -118,26 +118,25 @@ const itemSchema = new Schema({
 			"improvised",
 			"silvered",
 		],
-  },
-  speed: {
+	},
+	speed: {
 		required: function () {
 			return this.category === "mount/vehicle";
 		},
 		type: Number,
-  },
-  carrying_capacity: {
+	},
+	carrying_capacity: {
 		required: function () {
 			return this.category === "mount/vehicle";
 		},
 		type: Number,
-  },
-  requires_attunement: {
-    required: function () {
+	},
+	requires_attunement: {
+		required: function () {
 			return this.category === "magic item";
-    },
-    type: Boolean
-  }
+		},
+		type: Boolean,
+	},
 });
-
 
 module.exports = mongoose.model("Item", itemSchema, "Items");

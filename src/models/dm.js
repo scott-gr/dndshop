@@ -17,12 +17,12 @@ const dmSchema = new Schema({
 	groupId: {
 		type: Number,
 		required: true,
-  },
-  shops: {
-    type: Array,
-    required: true,
-    max: 8,
-  }
+	},
+	shops: {
+		type: Array,
+		required: true,
+		max: 8,
+	},
 });
 
 module.exports = mongoose.model("DM", dmSchema, "DMs");

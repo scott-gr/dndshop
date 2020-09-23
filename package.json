@@ -48,5 +48,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "engines": {
+    "node": "10.16.0"
+  },
+  "proxy": "http://localhost:5000"
 }
