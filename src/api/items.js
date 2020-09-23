@@ -18,32 +18,32 @@ router.post("/", (req, res) => {
 		rarity,
 		ac,
 		weight,
-    modifier,
-    //weapons
+		modifier,
+		//weapons
 		damage_dice,
 		damage_type,
-    properties,
-    //magic items
-    requires_attunement,
-    //mounts and vehicles only
+		properties,
+		//magic items
+		requires_attunement,
+		//mounts and vehicles only
 		speed,
 		carrying_capacity,
 	} = req.body;
 	const newItem = new Item({
 		name: name,
-    type: type,
+		type: type,
 		desc: desc,
 		price: price,
 		rarity: rarity,
 		ac: ac,
 		weight: weight,
-    modifier: modifier,
-    damage_dice: damage_dice,
+		modifier: modifier,
+		damage_dice: damage_dice,
 		damage_type: damage_type,
-    properties: properties,
-    requires_attunement: requires_attunement,
-    speed: speed,
-    carrying_capacity: carrying_capacity
+		properties: properties,
+		requires_attunement: requires_attunement,
+		speed: speed,
+		carrying_capacity: carrying_capacity,
 	});
 	newItem
 		.save()
