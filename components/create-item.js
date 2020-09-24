@@ -1,4 +1,8 @@
-import { Link } from "gatsby";
+//gatsby stuff.. update for nextjs
+
+
+
+import { sendStatusCode } from "next/dist/next-server/server/api-utils";
 import React, { Component } from "react";
 import styles from "./create-item.module.css";
 

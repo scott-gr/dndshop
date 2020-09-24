@@ -1,3 +1,6 @@
+//gatsby stuff.. update for nextjs
+
+
 const express = require("express");
 const router = express.Router();
 
