@@ -1,5 +1,6 @@
-import { Link } from "gatsby";
-import Layout from "../layout";
+//gatsby stuff.. update for nextjs
+
+
 import React, { Component } from "react";
 import styles from "./search-item.module.css";
 
