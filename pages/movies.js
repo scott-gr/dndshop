@@ -1,3 +1,5 @@
+// testing db with sample data
+
 import { connectToDatabase } from "../util/mongodb";
 
 export default function Movies({ movies }) {
