@@ -1,3 +1,6 @@
+// sample data to test connection
+
+
 import { connectToDatabase } from "../../util/mongodb";
 
 export default async (req, res) => {
