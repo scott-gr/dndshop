@@ -1,7 +1,11 @@
-import mongoose from "mongoose";
-const { Schema } = mongoose;
+const mongoose = require('mongoose')
+const schema = mongoose.Schema;
 
-const itemSchema = new Schema({
+const itemSchema = new schema({
+	id: {
+		type: Number,
+		required: true,
+	},
 	name: {
 		type: String,
 		required: true,
@@ -38,24 +42,18 @@ const itemSchema = new Schema({
 			"artifact",
 			"unknown",
 		],
-		required: function () {
-			return this.category === "magic item";
-		},
+///required if magicitem
 	},
 	ac: {
 		type: Number,
-		required: function () {
-			return this.category === "armor";
-		},
+///required if armor
 	},
 	weight: {
 		type: Number,
 		maxlength: 6,
 	},
 	modifier: {
-		required: function () {
-			return this.category === "armor";
-		},
+///required if armor
 		ability: {
 			type: String,
 			enum: [
@@ -72,15 +70,11 @@ const itemSchema = new Schema({
 		},
 	},
 	damage_dice: {
-		required: function () {
-			return this.category === "weapon";
-		},
+/// required if weapon
 		type: String,
 	},
 	damage_type: {
-		required: function () {
-			return this.category === "weapon";
-		},
+///required if weapon
 		type: String,
 		enum: [
 			"piercing",
@@ -99,9 +93,7 @@ const itemSchema = new Schema({
 		],
 	},
 	properties: {
-		required: function () {
-			return this.category === "weapon";
-		},
+////required if weapon
 		type: String,
 		enum: [
 			"ammunition",
@@ -120,23 +112,17 @@ const itemSchema = new Schema({
 		],
 	},
 	speed: {
-		required: function () {
-			return this.category === "mount/vehicle";
-		},
+///required if mountvehicle
 		type: Number,
 	},
 	carrying_capacity: {
-		required: function () {
-			return this.category === "mount/vehicle";
-		},
+///required if mountvehicle
 		type: Number,
 	},
 	requires_attunement: {
-		required: function () {
-			return this.category === "magic item";
-		},
+///required if magicitem
 		type: Boolean,
 	},
 });
 
-module.exports = mongoose.model("Item", itemSchema, "Items");
+module.exports = mongoose.model("items", itemSchema);
