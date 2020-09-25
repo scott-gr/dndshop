@@ -1,14 +1,7 @@
 //gatsby stuff.. update for nextjs
-
-
-
 import React from "react";
-import { Link } from "gatsby";
-
-import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
-import styles from "./dashboard.module.css";
+import { Link } from "next";
+import styles from "../styles/dashboard.module.css";
 
 //Large dashboard button
 const DashBtn = props => (
@@ -21,13 +14,12 @@ const DashBtn = props => (
 );
 
 const DashboardPage = () => (
-	<Layout>
-		<SEO title="Home" />
+	<div>
 		<main className={styles.buttons}>
 			<DashBtn dashicon="" dashbtntxt="Party" to="/party/" alt="party icon" />
 			<DashBtn dashicon="" dashbtntxt="Shops" to="/shops/" alt="shop icon" />
 		</main>
-	</Layout>
+	</div>
 );
 
 export default DashboardPage;
