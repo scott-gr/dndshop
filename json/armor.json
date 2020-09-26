@@ -1,6 +1,5 @@
 [
 	{
-		"id": "no_armor",
 		"name": "No Armor",
 		"type": "No Armor",
 		"rarity": "Standard",
@@ -16,7 +15,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "padded_armour",
 		"name": "Padded Armor",
 		"type": "Light Armor",
 		"rarity": "Standard",
@@ -33,7 +31,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "leather_armour",
 		"name": "Leather Armor",
 		"type": "Light Armor",
 		"rarity": "Standard",
@@ -50,7 +47,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "studded_leather_armour",
 		"name": "Studded Leather Armor",
 		"type": "Light Armor",
 		"rarity": "Standard",
@@ -67,7 +63,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "hide",
 		"name": "Hide",
 		"type": "Medium Armor",
 		"ac": 12,
@@ -83,7 +78,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "chain_shirt",
 		"name": "Chain Shirt",
 		"type": "Medium Armor",
 		"rarity": "Standard",
@@ -100,7 +94,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "scale",
 		"name": "Scale mail",
 		"type": "Medium Armor",
 		"rarity": "Standard",
@@ -117,7 +110,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "breastplate",
 		"name": "Breastplate",
 		"type": "Medium Armor",
 		"rarity": "Standard",
@@ -134,7 +126,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "half_plate",
 		"name": "Half plate",
 		"type": "Medium Armor",
 		"rarity": "Standard",
@@ -151,7 +142,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "ring_mail",
 		"name": "Ring mail",
 		"type": "Heavy Armor",
 		"rarity": "Standard",
@@ -163,7 +153,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "chain_mail",
 		"name": "Chain mail",
 		"type": "Heavy Armor",
 		"rarity": "Standard",
@@ -177,7 +166,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "splint",
 		"name": "Splint",
 		"type": "Heavy Armor",
 		"rarity": "Standard",
@@ -191,7 +179,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "plate_mail",
 		"name": "Plate Mail",
 		"type": "Heavy Armor",
 		"rarity": "Standard",
@@ -205,7 +192,6 @@
 		"disadvantage": true
 	},
 	{
-		"id": "mage_armour_spell",
 		"name": "Mage Armour spell",
 		"type": "Spell",
 		"rarity": "",
@@ -222,7 +208,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "barbarian_unarmoured",
 		"name": "Barbarian Unarmoured",
 		"type": "Defense ability",
 		"rarity": "",
@@ -243,7 +228,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "monk_unarmoured",
 		"name": "Monk Unarmoured",
 		"type": "Defense ability",
 		"rarity": "",
@@ -264,7 +248,6 @@
 		"disadvantage": false
 	},
 	{
-		"id": "sorcerer_draconic",
 		"name": "Sorcerer Draconic",
 		"type": "Resilience ability",
 		"rarity": "",

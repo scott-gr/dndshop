@@ -1,7 +1,7 @@
 //gatsby stuff.. update for nextjs
 import React from "react";
 import { Link } from "next";
-import styles from "../styles/dashboard.module.css";
+import styles from "../styles/dashbutton.module.css";
 
 //Large dashboard button
 const DashBtn = props => (
@@ -13,13 +13,5 @@ const DashBtn = props => (
 	</Link>
 );
 
-const DashboardPage = () => (
-	<div>
-		<main className={styles.buttons}>
-			<DashBtn dashicon="" dashbtntxt="Party" to="/party/" alt="party icon" />
-			<DashBtn dashicon="" dashbtntxt="Shops" to="/shops/" alt="shop icon" />
-		</main>
-	</div>
-);
 
-export default DashboardPage;
+export {DashBtn};
