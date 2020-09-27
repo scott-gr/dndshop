@@ -2,7 +2,7 @@
 
 
 import React, { Component } from "react";
-import styles from "./search-item.module.css";
+import styles from "../styles/globals";
 
 class SearchItem extends Component {
   state = {
@@ -10,7 +10,9 @@ class SearchItem extends Component {
     searchCategory:"",
     itemSearched:"",
   };
-  
+	
+	// db.items.find( { $text: { $search: "{itemSearched}" } },  )
+
 	render() {
 		return (
 			<div>

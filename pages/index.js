@@ -1,76 +1,25 @@
-import Head from "next/head";
+import Layout from "../components/layout/layout.js";
 import { connectToDatabase } from "../util/mongodb";
 
-export default function Home({ isConnected }) {
-	return (
-		<div className="container">
-			<Head>
-				<title>Create Next App</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-
-			<main>
-				<h1 className="title">
-					Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
-				</h1>
-
-				{isConnected ? (
-					<h2 className="subtitle">You are connected to MongoDB</h2>
-				) : (
-					<h2 className="subtitle">
-						You are NOT connected to MongoDB. Check the <code>README.md</code>{" "}
-						for instructions.
-					</h2>
-				)}
-
-				<p className="description">
-					Get started by editing <code>pages/index.js</code>
-				</p>
-
-				<div className="grid">
-					<a href="https://nextjs.org/docs" className="card">
-						<h3>Documentation &rarr;</h3>
-						<p>Find in-depth information about Next.js features and API.</p>
-					</a>
-
-					<a href="https://nextjs.org/learn" className="card">
-						<h3>Learn &rarr;</h3>
-						<p>Learn about Next.js in an interactive course with quizzes!</p>
-					</a>
-
-					<a
-						href="https://github.com/vercel/next.js/tree/master/examples"
-						className="card"
-					>
-						<h3>Examples &rarr;</h3>
-						<p>Discover and deploy boilerplate example Next.js projects.</p>
-					</a>
-
-					<a
-						href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						className="card"
-					>
-						<h3>Deploy &rarr;</h3>
-						<p>
-							Instantly deploy your Next.js site to a public URL with Vercel.
-						</p>
-					</a>
-				</div>
-			</main>
-
-			<footer>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{" "}
-					<img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-				</a>
-			</footer>
-		</div>
-	);
-}
+const Home = ({ isConnected }) => (
+	<Layout>
+		<h1>Next Auth App</h1>
+		<p>
+			This is a sample project that uses{" "}
+			<a href={`https://github.com/iaincollins/next-auth`}>NextAuth.js</a> v2 to
+			add authentication to <a href={`https://nextjs.org/`}>Next.js</a>.
+		</p>
+		<p>
+			See <a href={`https://next-auth.js.org/`}>next-auth.js.org</a> for more
+			information and documentation.
+		</p>
+		{isConnected ? (
+			<h2 styleName="subtitle">You are connected to the database</h2>
+		) : (
+			<h2 styleName="subtitle">You are NOT connected to the database.</h2>
+		)}
+	</Layout>
+);
 
 export async function getServerSideProps(context) {
 	const { client } = await connectToDatabase();
@@ -81,3 +30,5 @@ export async function getServerSideProps(context) {
 		props: { isConnected },
 	};
 }
+
+export default Home;
