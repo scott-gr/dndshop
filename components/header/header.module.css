@@ -3,7 +3,7 @@
   font-size: x-large;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;

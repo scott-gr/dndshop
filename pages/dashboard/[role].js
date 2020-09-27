@@ -1,25 +1,27 @@
 import { Link } from "next/link";
-import styles from'./dashbutton.css';
-
+import Layout from "../../components/layout/layout";
+import styles from "./dashbutton.css";
 
 function Dashboard({ dashboard }) {
 	return (
-		<div>
-			<main>
-				<Link className="style.dashbtn" href="/party">
-					<span>
-						<img src="" className="style.dashicon" alt="party icon" />
-					</span>
-					<span className="style.dashbtntxt">Manage Party</span>
-				</Link>
-				<Link className="style.dashbtn" href="/myshops">
-					<span>
-						<img src="" className="style.dashicon" alt="shop icon" />
-					</span>
-					<span className="style.dashbtntxt">My Shops</span>
-				</Link>
-			</main>
-		</div>
+		<Layout>
+			<div>
+				<main>
+					<Link className={styles.dashbtn} href="/party">
+						<span>
+							<img src="" className={styles.dashicon} alt="party icon" />
+						</span>
+						<span className={styles.dashbtntxt}>Manage Party</span>
+					</Link>
+					<Link className={styles.dashbtn} href="/myshops">
+						<span>
+							<img src="" className={styles.dashicon} alt="shop icon" />
+						</span>
+						<span className={styles.dashbtntxt}>My Shops</span>
+					</Link>
+				</main>
+			</div>
+		</Layout>
 	);
 }
 // This function gets called at build time

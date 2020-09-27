@@ -1,7 +1,7 @@
 // components/layout.js
-
 import Head from 'next/head';
 import Header from '../header/header.js';
+
 
 const Layout = ({ children }) => (
   <>

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { signin, signout, useSession } from "next-auth/client";
-import "./header.css";
+import styles from "./header.module.css";
 
 const Header = () => {
 	const [session, loading] = useSession();
 	return (
-		<header styleName="header">
-			<nav>
+		<header className={styles.header}>
+			<nav className={styles.navbar}>
 				<Link href="/">
-					<span styleName="headerbrand">DNDSHOP</span>
+					<span className={styles.headerbrand}>DNDSHOP</span>
 				</Link>
 
 				<p>
@@ -20,7 +20,7 @@ const Header = () => {
 								signin();
 							}}
 						>
-							<button styleName="signInButton">Sign in</button>
+							<button className={styles.signInButton}>Sign in</button>
 						</a>
 					)}
 					{session && (
@@ -29,11 +29,11 @@ const Header = () => {
 								<a>
 									<span
 										style={{ backgroundImage: `url(${session.user.image})` }}
-										styleName="avatar"
+										className={styles.avatar}
 									/>
 								</a>
 							</Link>
-							<span styleName="email">{session.user.email}</span>
+							<span className={styles.email}>{session.user.email}</span>
 							<a
 								href="/api/auth/signout"
 								onClick={e => {
@@ -41,13 +41,13 @@ const Header = () => {
 									signout();
 								}}
 							>
-								<button styleName="signOutButton">Sign out</button>
+								<button className="signOutButton">Sign out</button>
 							</a>
 						</>
 					)}
 				</p>
 
-				<button styleName="signInButton">Sign in</button>
+				<button className="signInButton">Sign in</button>
 			</nav>
 		</header>
 	);

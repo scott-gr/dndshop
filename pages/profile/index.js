@@ -11,7 +11,7 @@ const Profile = () => {
     <Layout>
       {session && (
         <>
-          <img src={session.user.image} styleName="avatar" />
+          <img src={session.user.image} className="styles.avatar" />
           <h1>{session.user.name}</h1>
         </>
       )}
