@@ -1,8 +1,9 @@
+import Layout from "../components/layout/layout.js";
 import { connectToDatabase } from "../util/mongodb";
 
 export default function Home({ isConnected }) {
 	return (
-		<div>
+		<Layout>
 				{isConnected ? (
 					<h2 className="subtitle">You are connected to the database</h2>
 				) : (
@@ -10,7 +11,7 @@ export default function Home({ isConnected }) {
 						You are NOT connected to the database.
 					</h2>
 				)}
-		</div>
+		</Layout>
 	);
 }
 

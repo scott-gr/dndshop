@@ -1,0 +1,13 @@
+.headerbrand {
+  color: var(--red);
+  font-size: x-large;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0.2rem 1.25rem;
+}
