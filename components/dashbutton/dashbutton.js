@@ -1,6 +1,8 @@
 //gatsby stuff.. update for nextjs
 import { Link } from "next/link";
-// import './dashbutton.css';
+import dashbtn from'./dashbutton.css';
+import dashbtntxt from './dashbutton.css';
+import dashicon from './dashbutton.css';
 
 //Large dashboard button
 const DashBtn = ({props}) => (

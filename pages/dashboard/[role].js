@@ -1,18 +1,22 @@
+import { Link } from "next/link";
+import styles from'./dashbutton.css';
+
+
 function Dashboard({ dashboard }) {
 	return (
 		<div>
 			<main>
-				<Link styleName="dashbtn" href="/party">
+				<Link className="style.dashbtn" href="/party">
 					<span>
-						<img src="" styleName="dashicon" alt="party icon" />
+						<img src="" className="style.dashicon" alt="party icon" />
 					</span>
-					<span styleName="dashbtntxt">Manage Party</span>
+					<span className="style.dashbtntxt">Manage Party</span>
 				</Link>
-				<Link styleName="dashbtn" href="/party">
+				<Link className="style.dashbtn" href="/myshops">
 					<span>
-						<img src="" styleName="dashicon" alt="shop icon" />
+						<img src="" className="style.dashicon" alt="shop icon" />
 					</span>
-					<span styleName="dashbtntxt">My Shops</span>
+					<span className="style.dashbtntxt">My Shops</span>
 				</Link>
 			</main>
 		</div>

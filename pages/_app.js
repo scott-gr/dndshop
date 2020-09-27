@@ -1,6 +1,15 @@
 import '../styles/globals.css'
 
-// This default export is required in a new `pages/_app.js` file.
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+
+import { Provider } from 'next-auth/client';
+
+const App = ({ Component, pageProps }) => {
+  const { session } = pageProps;
+  return (
+    <Provider options={{ site: process.env.SITE }} session={session}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
+
+export default App;
