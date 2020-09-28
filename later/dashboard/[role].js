@@ -27,7 +27,7 @@ function Dashboard({ dashboard }) {
 // This function gets called at build time
 export async function getStaticPaths() {
 	// Call nextauth to get role
-	const res = await fetch("https://.../dashboard");
+	const res = await fetch("https://dndshop.herokuapp.com/dashboard");
 	const dashboard = await res.json();
 
 	// Get the paths we want to pre-render based on posts
