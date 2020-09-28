@@ -1,6 +1,6 @@
 import { Link } from "next/link";
 import Layout from "../../components/layout/layout";
-import styles from "./dashbutton.css";
+import styles from "./dashbutton.module.css";
 
 function Dashboard({ dashboard }) {
 	return (
