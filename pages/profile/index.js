@@ -1,5 +1,5 @@
 import { useSession } from 'next-auth/client';
-import Layout from '../../components/layout/layout.js';
+import Layout from '../../components/layout.js';
 import styles from './profile.module.css'
 
 const Profile = () => {

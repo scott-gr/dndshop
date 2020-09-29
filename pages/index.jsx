@@ -1,4 +1,4 @@
-import Layout from "../components/layout/layout.js";
+import Layout from "../components/layout.js";
 import { connectToDatabase } from "../util/mongodb";
 
 const Home = ({ isConnected }) => (
