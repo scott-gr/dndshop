@@ -8,7 +8,6 @@ const [, { mutate }] = useUser();
     await fetch('/api/auth', {
       method: 'DELETE',
     });
-    // set the user state to null
     mutate(null);
   };
   return (
