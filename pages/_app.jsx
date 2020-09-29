@@ -1,15 +1,15 @@
 import '../styles/globals.css'
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout';
 
-
-import { Provider } from 'next-auth/client';
-
-const App = ({ Component, pageProps }) => {
-  const { session } = pageProps;
+export default function App({ Component, pageProps }) {
   return (
-    <Provider options={{ site: process.env.SITE }} session={session}>
+    <Layout>
+      <Head>
+        <title>DND SHOP</title>
+      </Head>
       <Component {...pageProps} />
-    </Provider>
+    </Layout>
   );
-};
-
-export default App;
+}

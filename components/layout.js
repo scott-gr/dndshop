@@ -1,6 +1,6 @@
 // components/layout.js
 import Head from 'next/head';
-import Header from './header/header.js';
+import Navbar from './navbar';
 
 
 const Layout = ({ children }) => (
@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Header />
+    <Navbar />
 
     <main className="container">{children}</main>
   </>
