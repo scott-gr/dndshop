@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Router from "next/router";
-import { useUser } from "../../lib/hooks";
-// import styles from './signup.module.css'
+import { useCurrentUser } from '../../lib/hooks'
 
 const SignupPage = () => {
-	const [user, { mutate }] = useUser();
+	const [user, { mutate }] = useCurrentUser();
 	const [errorMsg, setErrorMsg] = useState("");
-
-	// call whenever user changes (like signing up successfully)
 	useEffect(() => {
-		// redirect to home page if user is authenticated
+		// redirect to home if user is authenticated
 		if (user) Router.replace("/");
 	}, [user]);
 
@@ -29,7 +26,6 @@ const SignupPage = () => {
 		});
 		if (res.status === 201) {
 			const userObj = await res.json();
-			// writing our user object to the state
 			mutate(userObj);
 		} else {
 			setErrorMsg(await res.text());
@@ -47,9 +43,6 @@ const SignupPage = () => {
 					{errorMsg ? <p style={{ color: "red" }}>{errorMsg}</p> : null}
 					<label htmlFor="name">
 						<input id="name" name="name" type="text" placeholder="Your name" />
-					</label>
-					<label htmlFor="role">
-						<input id="role" name="role" type="text" placeholder="Your name" />
 					</label>
 					<label htmlFor="role">
 						<select id="role" name="role" type="text">
@@ -75,9 +68,11 @@ const SignupPage = () => {
 					</label>
 					<button type="submit">Sign up</button>
 				</form>
+				<p style={{ color: "#777", textAlign: "center" }}>
+					Note: The database is public in testing.
+				</p>
 			</div>
 		</>
 	);
 };
-
 export default SignupPage;

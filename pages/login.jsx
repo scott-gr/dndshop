@@ -2,16 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useUser } from '../../lib/hooks';
-// import styles from './login.module.css'
+import { useCurrentUser } from '../lib/hooks';
 
 const LoginPage = () => {
   const router = useRouter();
   const [errorMsg, setErrorMsg] = useState('');
-  const [user, { mutate }] = useUser();
+  const [user, { mutate }] = useCurrentUser();
   useEffect(() => {
     // redirect to home if user is authenticated
-    if (user) router.replace('/');
+    if (user) router.push('/');
   }, [user]);
 
   async function onSubmit(e) {
@@ -58,12 +57,11 @@ const LoginPage = () => {
           />
         </label>
         <button type="submit">Sign in</button>
-        <Link href="/forgetpassword">
+        <Link href="/forget-password">
           <a>Forget password</a>
         </Link>
       </form>
     </>
   );
 };
-
 export default LoginPage;

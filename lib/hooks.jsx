@@ -1,21 +1,13 @@
 import useSWR from 'swr';
-const fetcher = (url) => fetch(url).then((r) => r.json());
+import fetcher from './fetch';
 
-export function useUser() {
+export function useCurrentUser() {
   const { data, mutate } = useSWR('/api/user', fetcher);
-  const user = data && data.user;
+  const user = data?.user;
   return [user, { mutate }];
 }
 
-// for user Information, just use:
-// const [user, { mutate }] = useUser();
-
-// mutate can update the user state:
-
-// const [user, { mutate }] = useUser();
-// mutate({ user: { 
-//   ...user,
-//   name: 'new name'
-// })
-
-//similar item function needed?
+export function useUser(id) {
+  const { data } = useSWR(`/api/users/${id}`, fetcher, { revalidateOnFocus: false });
+  return data?.user;
+}
