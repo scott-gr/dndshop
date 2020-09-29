@@ -17,7 +17,7 @@ const Header = () => {
 							href="/api/auth/signin"
 							onClick={e => {
 								e.preventDefault();
-								signin();
+								signin('email',{email, callbackUrl: 'https://dndshop.herokuapp.com/profile'});
 							}}
 						>
 							<button className={styles.signInButton}>Sign in</button>
@@ -46,8 +46,6 @@ const Header = () => {
 						</>
 					)}
 				</p>
-
-				<button className="signInButton">Sign in</button>
 			</nav>
 		</header>
 	);
