@@ -2,39 +2,62 @@ import nextConnect from 'next-connect';
 import isEmail from 'validator/lib/isEmail';
 import normalizeEmail from 'validator/lib/normalizeEmail';
 import bcrypt from 'bcryptjs';
+import { nanoid } from 'nanoid';
 import middleware from '../../middlewares/middleware';
 import { extractUser } from '../../lib/api-helpers';
+import { getUser } from '../../../../lib/db';
+import passport from '../../lib/passport';
+
+
 
 const handler = nextConnect();
 
-handler.use(middleware); 
+handler.use(middleware);
 
-// POST /api/users
+handler.get(async (req, res) => {
+  const user = await getUser(req, req.query.userId);
+  res.send({ user });
+});
+
+handler.post(passport.authenticate('local'), (req, res) => {
+  res.json({ user: extractUser(req) });
+});
+
+handler.delete((req, res) => {
+  req.logOut();
+  res.status(204).end();
+});
+
 handler.post(async (req, res) => {
-  const { name, password,role } = req.body;
-  const email = normalizeEmail(req.body.email); // this is to handle things like jane.doe@gmail.com and janedoe@gmail.com being the same
+  const { name, password } = req.body;
+  const email = normalizeEmail(req.body.email);
   if (!isEmail(email)) {
     res.status(400).send('The email you entered is invalid.');
     return;
   }
-  if (!password || !name || !role) {
+  if (!password || !name) {
     res.status(400).send('Missing field(s)');
     return;
   }
-  // check if email existed
   if ((await req.db.collection('users').countDocuments({ email })) > 0) {
     res.status(403).send('The email has already been used.');
+    return;
   }
-
-  //bcrypt hashes password for user security
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await req.db
     .collection('users')
-    .insertOne({ email, password: hashedPassword, name, role })
+    .insertOne({
+      _id: nanoid(12),
+      email,
+      password: hashedPassword,
+      name,
+      emailVerified: false,
+      character: '',
+      profilePicture: null,
+    })
     .then(({ ops }) => ops[0]);
   req.logIn(user, (err) => {
     if (err) throw err;
-    // when logged in, return the user object
     res.status(201).json({
       user: extractUser(req),
     });
