@@ -7,20 +7,10 @@ const IndexPage = () => {
 
   return (
     <>
-      <style jsx>
-        {`
-          p {
-            text-align: center;
-            color: #888;
-          }
-          h3 {
-            color: #555;
-          }
-        `}
-      </style>
+
       <div style={{ marginBottom: '2rem' }}>
         <h2>
-          Hello,
+          Welcome,
           {' '}
           {user ? user.name : 'stranger'}
           !
@@ -33,8 +23,7 @@ const IndexPage = () => {
           {' '}
           <span role="img" aria-label="Earth">🌎</span>
         </h3>
-        {/* <PostEditor />
-        <Posts /> */}
+
       </div>
     </>
   );

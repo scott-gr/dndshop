@@ -11,13 +11,13 @@ handler.use(middleware);
 
 // POST /api/users
 handler.post(async (req, res) => {
-  const { name, password } = req.body;
+  const { name, password,role } = req.body;
   const email = normalizeEmail(req.body.email); // this is to handle things like jane.doe@gmail.com and janedoe@gmail.com being the same
   if (!isEmail(email)) {
     res.status(400).send('The email you entered is invalid.');
     return;
   }
-  if (!password || !name) {
+  if (!password || !name || !role) {
     res.status(400).send('Missing field(s)');
     return;
   }
@@ -30,7 +30,7 @@ handler.post(async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await req.db
     .collection('users')
-    .insertOne({ email, password: hashedPassword, name })
+    .insertOne({ email, password: hashedPassword, name, role })
     .then(({ ops }) => ops[0]);
   req.logIn(user, (err) => {
     if (err) throw err;

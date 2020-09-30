@@ -68,7 +68,7 @@ const SignupPage = () => {
 					</label>
 					<button type="submit">Sign up</button>
 				</form>
-				<p style={{ color: "#777", textAlign: "center" }}>
+				<p>
 					Note: The database is public in testing.
 				</p>
 			</div>
