@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import { useCurrentUser } from '../lib/hooks';
+import { useCurrentUser } from '../../lib/hooks';
 
 const ProfileSection = () => {
   const [user, { mutate }] = useCurrentUser();
@@ -63,11 +63,11 @@ const ProfileSection = () => {
     }
   };
 
-  async function sendVerificationEmail() {
-    await fetch('/api/user/email/verify', {
-      method: 'POST',
-    });
-  }
+  // async function sendVerificationEmail() {
+  //   await fetch('/api/user/email/verify', {
+  //     method: 'POST',
+  //   });
+  // }
 
   return (
     <>
@@ -78,7 +78,7 @@ const ProfileSection = () => {
         <h2>Edit Profile</h2>
         {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
         <form onSubmit={handleSubmit}>
-          {!user.emailVerified ? (
+          {/* {!user.emailVerified ? (
             <p>
               Your email has not been verified.
               {' '}
@@ -86,7 +86,7 @@ const ProfileSection = () => {
                   Send verification email
                 </a>
             </p>
-          ) : null}
+          ) : null} */}
           <label htmlFor="name">
             Name
             <input

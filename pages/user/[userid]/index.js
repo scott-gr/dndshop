@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Error from 'next/error';
-import middleware from '../../middlewares/middleware';
-import { useCurrentUser } from '../../lib/hooks';
-import { getUser } from '../../lib/db';
+import middleware from '../../../middlewares/middleware';
+import { useCurrentUser } from '../../../lib/hooks';
+import { getUser } from '../../../lib/db';
 
 export default function UserPage({ user }) {
   if (!user) return <Error statusCode={404} />;
@@ -51,6 +51,6 @@ export async function getServerSideProps(context) {
   return {
     props: {
       user,
-    }, // will be passed to the page component as props
+    },
   };
 }

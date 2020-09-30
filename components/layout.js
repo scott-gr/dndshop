@@ -41,15 +41,16 @@ const Layout = ({ children }) => {
 						{!user ? (
 							<div>
 								<Link href="/login">
-									<a>Sign in</a>
+									<button>Sign in</button>
 								</Link>
 								<Link href="/signup">
-									<a>Sign up</a>
+									<button>Sign up</button>
 								</Link>
 							</div>
 						) : (
 							<div>
-								<Link href="/user/[id]" as={`/user/${user._id}`}>
+								{/* <Link href="/user/[userId]" as={`/user/${user._id}`}> */}
+                <Link href="/profile">
 									<button>Profile</button>
 								</Link>
 
