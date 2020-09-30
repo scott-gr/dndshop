@@ -1,4 +1,4 @@
-// //gatsby stuff.. update for nextjs
+
 // import { Link } from "next/link";
 // import dashbtn from'./dashbutton.css';
 // import dashbtntxt from './dashbutton.css';

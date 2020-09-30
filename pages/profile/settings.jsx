@@ -63,12 +63,6 @@ const ProfileSection = () => {
     }
   };
 
-  // async function sendVerificationEmail() {
-  //   await fetch('/api/user/email/verify', {
-  //     method: 'POST',
-  //   });
-  // }
-
   return (
     <>
       <Head>
@@ -78,15 +72,6 @@ const ProfileSection = () => {
         <h2>Edit Profile</h2>
         {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
         <form onSubmit={handleSubmit}>
-          {/* {!user.emailVerified ? (
-            <p>
-              Your email has not been verified.
-              {' '}
-                <a role="button" onClick={sendVerificationEmail}>
-                  Send verification email
-                </a>
-            </p>
-          ) : null} */}
           <label htmlFor="name">
             Name
             <input

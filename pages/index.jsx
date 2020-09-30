@@ -14,10 +14,10 @@ const IndexPage = () => {
           {user ? user.name : 'stranger'}
           !
         </h2>
-        <p>Have a wonderful day.</p>
+
       </div>
       <div>
-
+        {''}
       </div>
     </>
   );

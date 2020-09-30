@@ -5,7 +5,8 @@ import { useCurrentUser } from "../../lib/hooks";
 
 const ProfilePage = () => {
 	const [user] = useCurrentUser();
-	const { name, email, character, profilePicture } = user || {};
+  const { name, email, character, profilePicture, role } = user || {};
+  
 
 	if (!user) {
 		return <p>Please sign in</p>;
@@ -19,6 +20,7 @@ const ProfilePage = () => {
 				{profilePicture ? (
 					<img src={profilePicture} width="256" height="256" alt={name} />
 				) : null}
+        Role: <p>{role}</p>
 				<section>
 					<div>
 						<h2>{name}</h2>

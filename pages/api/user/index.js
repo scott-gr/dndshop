@@ -37,18 +37,19 @@ handler.patch(upload.single("profilePicture"), async (req, res) => {
 		});
 		profilePicture = image.secure_url;
 	}
-	const { name, character } = req.body;
+	const { name, character, role } = req.body;
 	await req.db.collection("users").updateOne(
 		{ _id: req.user._id },
 		{
 			$set: {
 				...(name && { name }),
+				...(role && { role }),
 				...((character && { character }) || ""),
 				...(profilePicture && { profilePicture }),
 			},
 		}
 	);
-	res.json({ user: { name, character } });
+	res.json({ user: { name, character, role, profilePicture } });
 });
 
 export const config = {

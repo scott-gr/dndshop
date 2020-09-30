@@ -30,7 +30,7 @@ handler.post(async (req, res) => {
 			dynamic_template_data: {
 				subject: "[DND Shop] Reset your password.",
 				name: user.name,
-				url: `${process.env.WEB_URI}/forgetpassword/${token}`,
+				url: `${process.env.WEB_URI}/forgotpassword/${token}`,
 			},
 		};
 		await sgMail.send(msg);
