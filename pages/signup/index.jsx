@@ -46,8 +46,8 @@ const SignupPage = () => {
 					</label>
 					<label htmlFor="role">
 						<select id="role" name="role" type="text">
-							<option value="player">Player</option>
-							<option value="dm">DM</option>
+							<option value="Player">Player</option>
+							<option value="DM">DM</option>
 						</select>
 					</label>
 					<label htmlFor="email">
@@ -68,9 +68,6 @@ const SignupPage = () => {
 					</label>
 					<button type="submit">Sign up</button>
 				</form>
-				<p style={{ color: "#777", textAlign: "center" }}>
-					Note: The database is public in testing.
-				</p>
 			</div>
 		</>
 	);
