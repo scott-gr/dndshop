@@ -14,6 +14,7 @@ const IndexPage = () => {
           {user ? user.name : 'stranger'}
           !
         </h2>
+        
 
       </div>
       <div>
