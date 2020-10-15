@@ -8,7 +8,7 @@ const SignupPage = () => {
 	const [errorMsg, setErrorMsg] = useState("");
 	useEffect(() => {
 		// redirect to home if user is authenticated
-		if (user) Router.replace("/");
+		if (user) Router.replace("/dashboard");
 	}, [user]);
 
 	const handleSubmit = async e => {
@@ -47,7 +47,7 @@ const SignupPage = () => {
 					<label htmlFor="role">
 						<select id="role" name="role" type="text">
 							<option value="Player">Player</option>
-							<option value="DM">DM</option>
+							<option value="dm">DM</option>
 						</select>
 					</label>
 					<label htmlFor="email">

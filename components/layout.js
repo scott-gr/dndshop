@@ -49,9 +49,11 @@ const Layout = ({ children }) => {
 							</div>
 						) : (
 							<div>
-								{/* <Link href="/user/[userId]" as={`/user/${user._id}`}> */}
                 <Link href="/profile">
 									<button>Profile</button>
+								</Link>
+								<Link href="/dashboard">
+									<button>Dashboard</button>
 								</Link>
 
 								<button tabIndex={0} role="button" onClick={handleLogout}>
