@@ -1,7 +1,10 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -13,6 +16,9 @@ if (process.env.NODE_ENV === "production") {
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+mongoose.connect(process.env.REACT_APP_MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

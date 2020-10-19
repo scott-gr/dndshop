@@ -7,6 +7,8 @@ import LandingPage from "./pages/Landing/LandingPage";
 import LoginPage from "./pages/Login/LoginPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import SignupPage from "./pages/Signup/SignupPage";
+require('dotenv').config()
+
 
 class App extends Component {
   render() {
