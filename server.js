@@ -17,7 +17,12 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-mongoose.connect(process.env.REACT_APP_MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect(process.env.REACT_APP_MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err) => {
+  if (err) { console.log(err);
+  }else {
+    console.log ("Connected to database");
+  }
+})
 
 
 app.listen(PORT, function() {
