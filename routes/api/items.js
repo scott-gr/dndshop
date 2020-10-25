@@ -1,5 +1,5 @@
 const express = require('express');
-import itemSchema from "/models/itemSchema"
+import itemSchema from "../../models/itemSchema";
 const app = express();
 
 app.get('/items', async (req, res) =>{

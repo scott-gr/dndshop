@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //api routes
-const itemsRouter = require("./client/src/routes/api/items");
+const itemsRouter = require("./routes/api/items");
 app.use("/items", itemsRouter);
 
 app.get("*", function (req, res) {

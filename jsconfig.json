@@ -1,8 +1,0 @@
-// jsconfig.json for create-react-app
-{
-  "compilerOptions": {
-    "baseUrl": "src",
-    "checkJs": true 
-  },
-  "include": ["src"]
-}
