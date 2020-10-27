@@ -8,7 +8,7 @@ const DashboardPage = () => {
 				<Link href="/myshops">
 					<button>
 						<span>
-							<img src="" />
+							<img src="" alt="my shop icon"/>
 						</span>
 						<span>My Shops</span>
 					</button>
@@ -17,7 +17,7 @@ const DashboardPage = () => {
 				<Link href="/mygroup">
 					<button>
 						<span>
-							<img src="" />
+							<img src="" alt="my group icon"/>
 						</span>
 						<span>My Group</span>
 					</button>
