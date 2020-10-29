@@ -14,18 +14,17 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.10",
-
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^4.0.0",
     "serialize-javascript": "^5.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/'\" \"npm run client\"",
+    "start:prod": "nodemon server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",

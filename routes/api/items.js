@@ -1,15 +1,15 @@
-const express = require('express');
-import itemSchema from "../../models/itemSchema";
-const app = express();
+import express from 'express';
+import Item from "../../models/itemSchema.js";
+const itemsRouter = express();
 
-app.get('/items', async (req, res) =>{
-  const items = await itemSchema.find({});
+itemsRouter.get('/items', async (req, res) =>{
+  const itemsRouter = await Item.find({});
 
   try {
-    res.send(items);
+    res.send(itemsRouter);
   }catch(err){
     res.status(500).send(err);
   }
 });
 
-module.exports = router
+export default itemsRouter
