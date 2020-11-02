@@ -59,4 +59,4 @@ router.post("/", (req, res) => {
 		);
 });
 
-export default itemRoutes;
+export { router as itemRoutes }
