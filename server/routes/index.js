@@ -1,5 +1,6 @@
+import express from "express";
 import path from "path";
-const router = require("express").Router();
+const router = express.Router();
 import { apiRoutes } from "./api/index.js"
 
 // API Routes
