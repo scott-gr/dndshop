@@ -8,17 +8,19 @@ const app = express();
 
 dotenv.config();
 
-connectDB();
-
-// Serve up static assets (usually on heroku)
+//middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets 
 app.use(express.static("client/build"));
 
-
 //api routes
-
 app.use(router);
 
+//connect to mongo atlas db
+connectDB();
 
+//start api server
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
