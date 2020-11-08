@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-const { Schema } = mongoose;
-
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
 const PlayerSchema = new Schema({
 	id: {
@@ -52,4 +51,6 @@ const PlayerSchema = new Schema({
 	},
 });
 
-module.exports = mongoose.model("Player", PlayerSchema, "Players");
+const Player = mongoose.model("Player", PlayerSchema);
+
+export { Player };
