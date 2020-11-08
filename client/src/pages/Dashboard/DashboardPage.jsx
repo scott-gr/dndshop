@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import SearchItem from '../../components/SearchItem/SearchItem.jsx'
 
 const DashboardPage = () => {
 	return (
-		<div>
+		<>
 			<div>
 				<Link href="/myshops">
 					<button>
@@ -43,7 +44,9 @@ const DashboardPage = () => {
 					</button>
 				</Link>
 			</div> */}
-		</div>
+
+			< SearchItem />
+		</>
 	);
 };
 
