@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./createItem.module.css"
+import "./createitem.css"
 
 class CreateItem extends Component {
 	state = {
@@ -26,12 +26,12 @@ class CreateItem extends Component {
 			<div>
 				<button
 					onClick={e => this.togglePanel(e)}
-					className={styles.collapsebutton}
+					stylename= "collapsebutton"
 				>
 					{this.props.title}Create Item
 				</button>
 				{this.state.open ? (
-					<div className={styles.collapsecontent}>
+					<div stylename= "collapsecontent">
 						{this.props.children}
 						<form>
 							<h2>Create New Item</h2>
