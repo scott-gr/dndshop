@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "../Button/Button.jsx"
 
 const rates = {
 	COPPER: {
@@ -38,9 +39,21 @@ const rates = {
 	},
 };
 
-if (rates[select.value] && rates[select.value][select1.value]) {
-	result.value = amount * rates[select.value][select1.value];
-}
+let fromCoin = document.getElementById("fromCoin");
+let tooCoin = document.getElementById("tooCoin");
+let amount = document.getElementById("amount");
+let convertedCoin = document.getElementById("result");
+
+const convertCoin = () => {
+	if (rates[fromCoin.value] && rates[fromCoin.value][tooCoin.value]) {
+		convertedCoin = amount * rates[fromCoin.value][tooCoin.value];
+		console.log(convertedCoin);
+	}
+	return convertedCoin;
+};
+
+document.getElementById("convertBtn").addEventListener("click", convertCoin()
+})
 
 class Converter extends Component {
 	render() {
@@ -50,21 +63,23 @@ class Converter extends Component {
 				<form>
 					<label for="amount">Amount</label>
 					<input type="text" id="amount" value="" />
-					<select id="from">
-						<option value= "COPPER" >Copper </option>
+					<select id="fromCoin">
+						<option value="COPPER">Copper </option>
 						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
-					<select id="too">
-          <option value= "COPPER" >Copper </option>
+
+					<select id="tooCoin">
+						<option value="COPPER">Copper </option>
 						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
 					<input type="text" id="result" value=""></input>
+					<Button><input type="submit" id="convertBtn" value="Convert"/></Button>
 				</form>
 			</>
 		);

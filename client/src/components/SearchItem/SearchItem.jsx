@@ -7,7 +7,7 @@ const SearchItem = (props) => {
 
 		return (
 			<>
-				<form styleName= "search" onSubmit={handleSubmit}>
+				<form styleName= "search" onSubmit={props.handleSubmit}>
 					<select
 						value={props.category}
 						onChange={props.handleInputChange}
