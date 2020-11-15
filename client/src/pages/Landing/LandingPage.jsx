@@ -1,5 +1,6 @@
 import React from 'react';
 import Converter from '../../components/Converter/Converter.jsx';
+import "./landingpage.css";
 
 const LandingPage = () => {
   return (

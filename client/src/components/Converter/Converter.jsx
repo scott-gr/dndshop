@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "../Button/Button.jsx";
+import "./converter.css";
 
 const rates = {
 	COPPER: {
@@ -40,36 +41,36 @@ const rates = {
 };
 
 class Converter extends Component {
-	state = {
-		amount: "",
-		fromCoin: "COPPER",
-		tooCoin: "SILVER",
-	};
+	constructor(props){
+		super(props);
+		this.state = {
+			amount: "",
+			fromCoin: "COPPER",
+			tooCoin: "SILVER",
+			result: "",
+		};
+	}
 
-	// convertHandler = () => {
-	// 	if (this.state.fromCoin !== this.state.tooCoin){
-	// 		const result = this.state.amount 
-	// 	}
-	// }
 
 	handleInputChange = event => {
-		const target = event.target;
-		const value = target.type === "select" ? target.selected : target.value;
-		const name = target.name;
-
-		this.setState({
-			[name]: value,
-		});
+		this.setState({amount: event.target.value, fromCoin: event.target.value, tooCoin: event.target.value})
 	};
 
 	handleFormSubmit = event => {
 		event.preventDefault();
-	};
+		if (this.state.fromCoin === this.state.tooCoin) {
+			this.setState({result: this.state.amount})
+		}	else {
+			this.setState({result: this.state.amount} * rates[this.state.fromCoin][this.state.tooCoin])
+		}
+		return this.state.result
+		}
+
 
 	render() {
 		return (
 			<>
-				<h3 styleName="">Currency Converter</h3>
+				<h3 styleName="subtitle">Currency Converter</h3>
 				<form>
 					<label for="amount">Amount</label>
 					<input
@@ -84,7 +85,7 @@ class Converter extends Component {
 						onChange={this.handleInputChange}
 						value={this.state.fromCoin}
 					>
-						<option selected value="COPPER">
+						<option defaultValue="COPPER">
 							Copper{" "}
 						</option>
 						<option value="SILVER">Silver </option>
@@ -100,14 +101,14 @@ class Converter extends Component {
 						value={this.state.tooCoin}
 					>
 						<option value="COPPER">Copper </option>
-						<option selected value="SILVER">
+						<option defaultValue="SILVER">
 							Silver{" "}
 						</option>
 						<option value="ELECTRUM">Electrum </option>
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
-					<input type="text" id="result" value=""></input>
+					<input type="text" onChange= {this.handleInputChange} value={this.state.result}></input>
 					<Button onClick={this.handleFormSubmit}>
 						<input type="submit" id="convertBtn" value="Convert" />
 					</Button>
