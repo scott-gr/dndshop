@@ -61,7 +61,7 @@ class Converter extends Component {
 		if (this.state.fromCoin === this.state.tooCoin) {
 			this.setState({result: this.state.amount})
 		}	else {
-			this.setState({result: this.state.amount} * rates[this.state.fromCoin][this.state.tooCoin])
+			this.setState({result: this.state.amount * rates[this.state.fromCoin][this.state.tooCoin]})
 		}
 		return this.state.result
 		}
@@ -70,20 +70,20 @@ class Converter extends Component {
 	render() {
 		return (
 			<>
-				<h3 styleName="subtitle">Currency Converter</h3>
-				<form>
-					<label for="amount">Amount</label>
+				<h3 styleName="subtitle">Coin Exchange</h3>
+				<form onSubmit={this.handleFormSubmit}>
+					<label id="amount">Amount</label>
 					<input
 						name="amount"
 						type="text"
 						onChange={this.handleInputChange}
-						value={this.state.amount}
+						value={this.state.value}
 					/>
 					<select
 						name="fromCoin"
 						type="select"
 						onChange={this.handleInputChange}
-						value={this.state.fromCoin}
+						value={this.state.value}
 					>
 						<option defaultValue="COPPER">
 							Copper{" "}
@@ -98,7 +98,7 @@ class Converter extends Component {
 						name="tooCoin"
 						type="select"
 						onChange={this.handleInputChange}
-						value={this.state.tooCoin}
+						value={this.state.value}
 					>
 						<option value="COPPER">Copper </option>
 						<option defaultValue="SILVER">
@@ -108,10 +108,13 @@ class Converter extends Component {
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
-					<input type="text" onChange= {this.handleInputChange} value={this.state.result}></input>
-					<Button onClick={this.handleFormSubmit}>
-						<input type="submit" id="convertBtn" value="Convert" />
-					</Button>
+					<input 
+						name="result" 
+						type="text" 
+						onChange= {this.handleInputChange} 
+						value={this.state.value}
+					/>
+					<Button type="submit" onClick={this.handleFormSubmit}></Button>
 				</form>
 			</>
 		);
