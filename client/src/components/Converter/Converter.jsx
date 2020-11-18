@@ -41,19 +41,27 @@ const rates = {
 };
 
 class Converter extends Component {
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
-			amount: "",
+			amount: 1,
 			fromCoin: "COPPER",
 			tooCoin: "SILVER",
-			result: "",
+			result: 1,
 		};
+
+		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
 
-	handleInputChange = event => {
-		this.setState({amount: event.target.value, fromCoin: event.target.value, tooCoin: event.target.value})
+	handleInputChange(event) {
+		const target = event.target;
+		const value = target.type === 'select' ? target.selected : target.value;
+		const name = target.name
+		
+		this.setState({
+			[name]: value
+		})
 	};
 
 	handleFormSubmit = event => {
@@ -75,15 +83,15 @@ class Converter extends Component {
 					<label id="amount">Amount</label>
 					<input
 						name="amount"
-						type="text"
+						type="number"
 						onChange={this.handleInputChange}
-						value={this.state.value}
+						value={this.state.amount}
 					/>
 					<select
 						name="fromCoin"
 						type="select"
 						onChange={this.handleInputChange}
-						value={this.state.value}
+						selected={this.state.fromCoin}
 					>
 						<option defaultValue="COPPER">
 							Copper{" "}
@@ -98,7 +106,7 @@ class Converter extends Component {
 						name="tooCoin"
 						type="select"
 						onChange={this.handleInputChange}
-						value={this.state.value}
+						selected={this.state.tooCoin}
 					>
 						<option value="COPPER">Copper </option>
 						<option defaultValue="SILVER">
@@ -110,11 +118,12 @@ class Converter extends Component {
 					</select>
 					<input 
 						name="result" 
-						type="text" 
+						type="number" 
+						readOnly= {true}
 						onChange= {this.handleInputChange} 
-						value={this.state.value}
+						value={this.state.result}
 					/>
-					<Button type="submit" onClick={this.handleFormSubmit}></Button>
+					<Button type="submit" value="Submit">Exchange</Button>
 				</form>
 			</>
 		);
