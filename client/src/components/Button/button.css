@@ -1,0 +1,20 @@
+button { 
+	border: none;
+	border-radius: 50px;
+	background: #9d0a0e;
+	box-shadow: 6px 6px 0px #85090c, -2px -2px 0px #b50c10;
+	height: 30px;
+	font-weight: bold;
+	min-width: 100px;
+	margin: 12px;
+	padding: 12px;
+	font-size: larger;
+	color: var(--white);
+	cursor: pointer;
+}
+
+button:focus {
+	background: #8b090c;
+  box-shadow: inset -2px -2px 0px #b50c10, inset 7px 7px 0px #85090c;
+  outline: 0;
+}

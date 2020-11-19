@@ -1,0 +1,18 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    [
+      "module-resolver",
+      { "root": ["./src"] }
+    ],
+    "transform-class-properties",
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[path]__[name]__[local]__[hash:base64:5]",
+        "handleMissingStyleName": "warn",
+        "webpackHotModuleReloading": "true"
+      }
+    ]
+  ]
+}
