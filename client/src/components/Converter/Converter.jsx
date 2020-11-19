@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "../Button/Button.jsx";
 import "./converter.css";
 
-const rates = {
+const rates =  {
 	COPPER: {
 		COPPER: 1,
 		SILVER: 0.1,
@@ -44,10 +44,10 @@ class Converter extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			amount: 1,
-			fromCoin: "COPPER",
-			tooCoin: "SILVER",
-			result: 1,
+			amount: Number(""),
+			fromCoin: "",
+			tooCoin: "",
+			result: Number(""),
 		};
 
 		this.handleInputChange = this.handleInputChange.bind(this);
@@ -71,7 +71,7 @@ class Converter extends Component {
 		}	else {
 			this.setState({result: this.state.amount * rates[this.state.fromCoin][this.state.tooCoin]})
 		}
-		return this.state.result
+		return parseFloat(this.state.result)
 		}
 
 
@@ -93,9 +93,7 @@ class Converter extends Component {
 						onChange={this.handleInputChange}
 						selected={this.state.fromCoin}
 					>
-						<option defaultValue="COPPER">
-							Copper{" "}
-						</option>
+						<option value="COPPER">Copper</option>
 						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
 						<option value="GOLD">Gold </option>
@@ -109,9 +107,7 @@ class Converter extends Component {
 						selected={this.state.tooCoin}
 					>
 						<option value="COPPER">Copper </option>
-						<option defaultValue="SILVER">
-							Silver{" "}
-						</option>
+						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
