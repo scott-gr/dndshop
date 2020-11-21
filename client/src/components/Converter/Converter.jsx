@@ -82,13 +82,14 @@ class Converter extends Component {
 			<>
 				<h3 styleName="subtitle">Coin Exchange</h3>
 				<form onSubmit={this.handleFormSubmit}>
-					<label id="amount">Amount</label>
+					<label id="amount">Old coins</label>
 					<input
 						name="amount"
 						type="number"
 						onChange={this.handleInputChange}
 						value={this.state.amount}
 					/>
+					<label id="fromCoinLabel">from this coin...</label>
 					<select
 						name="fromCoin"
 						type="select"
@@ -101,7 +102,7 @@ class Converter extends Component {
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
-
+					<label id="tooCoinLabel">to this coin</label>
 					<select
 						name="tooCoin"
 						type="select"
@@ -115,6 +116,7 @@ class Converter extends Component {
 						<option value="GOLD">Gold </option>
 						<option value="PLATINUM">Platinum </option>
 					</select>
+					<label id="amount">New coins</label>
 					<input 
 						name="result" 
 						type="number" 
@@ -122,7 +124,7 @@ class Converter extends Component {
 						onChange= {this.handleInputChange} 
 						value={this.state.result}
 					/>
-					<Button type="submit" value="Submit"></Button>
+					<Button type="submit" value="Submit" text="Exhange Coins"></Button>
 				</form>
 			</>
 		);

@@ -3,12 +3,12 @@ button {
 	border-radius: 50px;
 	background: #9d0a0e;
 	box-shadow: 6px 6px 0px #85090c, -2px -2px 0px #b50c10;
-	height: 30px;
+	height: 40px;
 	font-weight: bold;
 	min-width: 100px;
 	margin: 12px;
-	padding: 12px;
-	font-size: larger;
+	padding: 10px;
+	font-size: large;
 	color: var(--white);
 	cursor: pointer;
 }
