@@ -66,7 +66,9 @@ class Converter extends Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
-		if (this.state.fromCoin === this.state.tooCoin) {
+		if (this.state.tooCoin === "" || this.state.fromCoin === "") {
+			alert("Please select coins");
+		} else if (this.state.fromCoin === this.state.tooCoin) {
 			this.setState({result: this.state.amount})
 		}	else {
 			this.setState({result: this.state.amount * rates[this.state.fromCoin][this.state.tooCoin]})
@@ -92,7 +94,7 @@ class Converter extends Component {
 						type="select"
 						onChange={this.handleInputChange}
 						selected={this.state.fromCoin}
-					>
+					>	<option disabled selected hidden>Select Coin...</option>
 						<option value="COPPER">Copper</option>
 						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
@@ -106,6 +108,7 @@ class Converter extends Component {
 						onChange={this.handleInputChange}
 						selected={this.state.tooCoin}
 					>
+						<option disabled selected hidden>Select Coin...</option>
 						<option value="COPPER">Copper </option>
 						<option value="SILVER">Silver </option>
 						<option value="ELECTRUM">Electrum </option>
@@ -119,7 +122,7 @@ class Converter extends Component {
 						onChange= {this.handleInputChange} 
 						value={this.state.result}
 					/>
-					<Button type="submit" value="Submit">Exchange</Button>
+					<Button type="submit" value="Submit"></Button>
 				</form>
 			</>
 		);
