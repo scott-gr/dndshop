@@ -1,7 +1,0 @@
-select:required:invalid {
-  color: var(--grey)
-}
-
-option[default] {
-  display: none
-}

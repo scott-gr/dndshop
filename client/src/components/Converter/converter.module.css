@@ -1,0 +1,38 @@
+select:required:invalid {
+  color: var(--grey)
+}
+
+formInput.select {
+  max-width: 125px;
+  }
+
+option[default] {
+  display: none
+}
+
+.subtitle {
+  color:var(--red);
+  font-size: xx-large;
+  justify-self: center;
+}
+
+.converterContainer {
+  display: inline-grid;
+  justify-content: center;
+  border-radius: 20px;
+	background: #f9f7ec;
+	box-shadow: inset 2px 2px 0px #ffffff, inset -4px -4px 0px #dbd9d0;
+  border: none;
+  padding: 0 30px 30px 30px;
+  width: fit-content;
+  grid-template-rows: auto auto;
+}
+
+.convertForm {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  row-gap: 20px;
+  column-gap: 20px;
+  margin-bottom: 10px;
+}
+
