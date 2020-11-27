@@ -85,73 +85,71 @@ class Converter extends Component {
 
 	render() {
 		return (
-			<>
-				<div className={styles.converterContainer}>
-					<h3 className={styles.subtitle}>Coin Exchange</h3>
-					<form className={styles.convertForm} onSubmit={this.handleFormSubmit}>
-						<div className={styles.formInput}>
-							<label id="fromCoinLabel">from this coin...</label>
-							<select
-								name="fromCoin"
-								type="select"
-								onChange={this.handleInputChange}
-								selected={this.state.fromCoin}
-								defaultValue={"DEFAULT"}
-							>
-								{" "}
-								<option disabled hidden value="DEFAULT">
-									Select Coin...
-								</option>
-								<option value="COPPER">Copper</option>
-								<option value="SILVER">Silver </option>
-								<option value="ELECTRUM">Electrum </option>
-								<option value="GOLD">Gold </option>
-								<option value="PLATINUM">Platinum </option>
-							</select>
-						</div>
-						<div className={styles.formInput}>
-							<label id="amount">Old coins</label>
-							<input
-								name="amount"
-								type="number"
-								onChange={this.handleInputChange}
-								value={this.state.amount}
-							/>
-						</div>
+			<div className={styles.converterContainer}>
+				<h3 className={styles.subtitle}>Coin Exchange</h3>
+				<form className={styles.convertForm} onSubmit={this.handleFormSubmit}>
+					<div className={styles.formInput}>
+						<label id="fromCoinLabel">from this coin...</label>
+						<select
+							name="fromCoin"
+							type="select"
+							onChange={this.handleInputChange}
+							selected={this.state.fromCoin}
+							defaultValue={"DEFAULT"}
+						>
+							{" "}
+							<option disabled hidden value="DEFAULT">
+								Select Coin...
+							</option>
+							<option value="COPPER">Copper</option>
+							<option value="SILVER">Silver </option>
+							<option value="ELECTRUM">Electrum </option>
+							<option value="GOLD">Gold </option>
+							<option value="PLATINUM">Platinum </option>
+						</select>
+					</div>
+					<div className={styles.formInput}>
+						<label id="amount">Old coins</label>
+						<input
+							name="amount"
+							type="number"
+							onChange={this.handleInputChange}
+							value={this.state.amount}
+						/>
+					</div>
 
-						<div className={styles.formInput}>
-							<label id="tooCoinLabel">to this coin</label>
-							<select
-								name="tooCoin"
-								type="select"
-								onChange={this.handleInputChange}
-								selected={this.state.tooCoin}
-								defaultValue={"DEFAULT"}
-							>
-								<option disabled hidden value="DEFAULT">
-									Select Coin...
-								</option>
-								<option value="COPPER">Copper </option>
-								<option value="SILVER">Silver </option>
-								<option value="ELECTRUM">Electrum </option>
-								<option value="GOLD">Gold </option>
-								<option value="PLATINUM">Platinum </option>
-							</select>
-						</div>
-						<div className={styles.formInput}>
-							<label id="amount">New coins</label>
-							<input
-								name="result"
-								type="number"
-								readOnly={true}
-								onChange={this.handleInputChange}
-								value={this.state.result}
-							/>
-						</div>
-					</form>
-					<Button type="submit" value="Submit" text="Exchange Coins"></Button>
-				</div>
-			</>
+					<div className={styles.formInput}>
+						<label id="tooCoinLabel">to this coin</label>
+						<select
+							name="tooCoin"
+							type="select"
+							onChange={this.handleInputChange}
+							selected={this.state.tooCoin}
+							defaultValue={"DEFAULT"}
+						>
+							<option disabled hidden value="DEFAULT">
+								Select Coin...
+							</option>
+							<option value="COPPER">Copper </option>
+							<option value="SILVER">Silver </option>
+							<option value="ELECTRUM">Electrum </option>
+							<option value="GOLD">Gold </option>
+							<option value="PLATINUM">Platinum </option>
+						</select>
+					</div>
+					<div className={styles.formInput}>
+						<label id="amount">New coins</label>
+						<input
+							name="result"
+							type="number"
+							readOnly={true}
+							onChange={this.handleInputChange}
+							value={this.state.result}
+						/>
+					</div>
+				</form>
+				<Button type="submit" value="Submit" text="Exchange Coins"></Button>
+			</div>
 		);
 	}
 }
