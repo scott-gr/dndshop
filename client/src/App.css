@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root {
 	--red: #9d0a0eff;
 	--orange: #c18c5dff;
-	--white: #f9f7ecff;
-	--grey: #5a5a5aff;
+	--white: #edeff9ff;
+	--light-grey: #9da0aaff;
+	--dark-grey: #5e6066ff;
 	--black: #0b0b0bff;
+	--green: #02f2beff;
+	--turquoise: #03a0b5ff;
+	--blue: #05668dff;
+	--fredoka: "Fredoka One", "Open Sans", sans-serif;
 }
 
 /* use color names
@@ -16,8 +22,9 @@
 
 
 
+
 html {
-	background-color: var(--white);
+	background-color: var(--light-grey);
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
@@ -26,8 +33,8 @@ input,
 select,
 textarea {
 	border-radius: 20px;
-	background: #f9f7ec;
-	box-shadow: inset 6px 6px 0px #dbd9d0, inset -2px -2px 0px #ffffff;
+	background: var(--light-grey);
+	box-shadow: inset 6px 6px 0px #858891, inset -2px -2px 0px #b5b8c4;
   border: none;
 	display:block;
 	margin-top: 4px;

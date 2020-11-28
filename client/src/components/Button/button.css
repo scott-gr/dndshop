@@ -1,8 +1,8 @@
 button { 
 	border: none;
 	border-radius: 50px;
-	background: #9d0a0e;
-	box-shadow: 6px 6px 0px #85090c, -2px -2px 0px #b50c10;
+	background: #05668d;
+	box-shadow: 6px 6px 0px #045778, -2px -2px 0px #0675a2;
 	height: 40px;
 	font-weight: bold;
 	min-width: 100px;
@@ -14,7 +14,7 @@ button {
 }
 
 button:focus {
-	background: #8b090c;
-  box-shadow: inset -2px -2px 0px #b50c10, inset 7px 7px 0px #85090c;
+	background: #05669d;
+  box-shadow: inset -2px -2px 0px #0675a2, inset 7px 7px 0px #045778;
   outline: 0;
 }
