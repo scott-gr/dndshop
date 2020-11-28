@@ -6,7 +6,7 @@ const LandingPage = () => {
 	return (
 			<div className={styles.container}>
 				<header className={styles.header}>
-					<h1>DnD Shop</h1>
+					<img src="../../assets/dndshop-logo.png" alt="dnd shop logo"/>
 				</header>
 				<nav>
 					<p>Nav buttons here?</p>
