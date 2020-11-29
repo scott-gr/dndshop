@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import SearchItem from '../../components/SearchItem/SearchItem.jsx'
+import Converter from "../../components/Converter/Converter.jsx";
+// import SearchItem from '../../components/SearchItem/SearchItem.jsx'
 
 const DashboardPage = () => {
 	return (
@@ -23,6 +24,7 @@ const DashboardPage = () => {
 						<span>My Group</span>
 					</button>
 				</Link>
+				< Converter />
 			</div>
 
       {/* player dashboard */}
@@ -45,7 +47,7 @@ const DashboardPage = () => {
 				</Link>
 			</div> */}
 
-			< SearchItem />
+			{/* < SearchItem /> */}
 		</>
 	);
 };

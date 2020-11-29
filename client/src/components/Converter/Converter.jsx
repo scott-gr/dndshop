@@ -147,8 +147,8 @@ class Converter extends Component {
 							value={this.state.result}
 						/>
 					</div>
+					<Button type="submit" value="Submit" text="Exchange Coins"></Button>
 				</form>
-				<Button type="submit" value="Submit" text="Exchange Coins"></Button>
 			</div>
 		);
 	}

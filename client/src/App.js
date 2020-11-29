@@ -17,9 +17,9 @@ class App extends Component {
 			characterName: "",
 			groupId: "",
       user: null // <-- add this line
-		}
+		};
 
-
+	}
 	render() {
 		return (
 			<Router>
