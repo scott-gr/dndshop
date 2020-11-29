@@ -6,9 +6,20 @@ import DashboardPage from "./pages/Dashboard/DashboardPage";
 import LandingPage from "./pages/Landing/LandingPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import SignupPage from "./pages/Signup/SignupPage";
+import firebase, { auth, provider } from './auth/firebase.js';
 require("dotenv").config();
 
 class App extends Component {
+	constructor() {
+    super();
+		this.state = {
+			username: "",
+			characterName: "",
+			groupId: "",
+      user: null // <-- add this line
+		}
+
+
 	render() {
 		return (
 			<Router>

@@ -4,6 +4,15 @@ import Button from "../Button/Button";
 import styles from "./login.module.css";
 
 class Login extends Component {
+	constructor() {
+		super();
+		this.state = {
+			username: "",
+			characterName: "",
+			groupId: "",
+			money: [],
+		};
+	}
 	render() {
 		return (
 			<form className={styles.loginForm}>
