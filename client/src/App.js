@@ -6,22 +6,17 @@ import DashboardPage from "./pages/Dashboard/DashboardPage";
 import LandingPage from "./pages/Landing/LandingPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import SignupPage from "./pages/Signup/SignupPage";
-import firebase, { auth, provider } from './auth/firebase.js';
+import PasswordResetPage from "./pages/Password-Reset/PasswordResetPage"
+
 require("dotenv").config();
 
+// firebase auth
 class App extends Component {
-	constructor() {
-    super();
-		this.state = {
-			username: "",
-			characterName: "",
-			groupId: "",
-      user: null // <-- add this line
-		};
-
-	}
 	render() {
-		return (
+		const user = null;
+		return user ? (
+			<DashboardPage />
+		) : (
 			<Router>
 				<Switch>
 					<>
@@ -29,6 +24,7 @@ class App extends Component {
 						<Route exact path="/dashboard" component={DashboardPage} />
 						<Route exact path="/profile" component={ProfilePage} />
 						<Route exact path="/signup" component={SignupPage} />
+						<Route exact path="/password-reset" component={PasswordResetPage} />
 					</>
 				</Switch>
 			</Router>
