@@ -4,22 +4,27 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import LandingPage from "./pages/Landing/LandingPage";
-import LoginPage from "./pages/Login/LoginPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import SignupPage from "./pages/Signup/SignupPage";
+import PasswordResetPage from "./pages/Password-Reset/PasswordResetPage"
+
 require("dotenv").config();
 
+// firebase auth
 class App extends Component {
 	render() {
-		return (
+		const user = null;
+		return user ? (
+			<DashboardPage />
+		) : (
 			<Router>
 				<Switch>
 					<>
 						<Route exact path="/" component={LandingPage} />
-						<Route exact path="/login" component={LoginPage} />
 						<Route exact path="/dashboard" component={DashboardPage} />
 						<Route exact path="/profile" component={ProfilePage} />
 						<Route exact path="/signup" component={SignupPage} />
+						<Route exact path="/password-reset" component={PasswordResetPage} />
 					</>
 				</Switch>
 			</Router>

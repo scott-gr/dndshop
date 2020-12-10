@@ -89,7 +89,7 @@ class Converter extends Component {
 				<h3 className={styles.subtitle}>Coin Exchange</h3>
 				<form className={styles.convertForm} onSubmit={this.handleFormSubmit}>
 					<div className={styles.formInput}>
-						<label id="fromCoinLabel">from this coin...</label>
+						<label htmlFor="fromCoin">from this coin...</label>
 						<select
 							name="fromCoin"
 							type="select"
@@ -109,7 +109,7 @@ class Converter extends Component {
 						</select>
 					</div>
 					<div className={styles.formInput}>
-						<label id="amount">Old coins</label>
+						<label htmlFor="amount">Old coins</label>
 						<input
 							name="amount"
 							type="number"
@@ -119,7 +119,7 @@ class Converter extends Component {
 					</div>
 
 					<div className={styles.formInput}>
-						<label id="tooCoinLabel">to this coin</label>
+						<label htmlFor="tooCoinLabel">to this coin</label>
 						<select
 							name="tooCoin"
 							type="select"
@@ -138,7 +138,7 @@ class Converter extends Component {
 						</select>
 					</div>
 					<div className={styles.formInput}>
-						<label id="amount">New coins</label>
+						<label htm="amount">New coins</label>
 						<input
 							name="result"
 							type="number"
@@ -147,8 +147,8 @@ class Converter extends Component {
 							value={this.state.result}
 						/>
 					</div>
+					<Button type="submit" value="Submit" text="Exchange Coins"></Button>
 				</form>
-				<Button type="submit" value="Submit" text="Exchange Coins"></Button>
 			</div>
 		);
 	}
