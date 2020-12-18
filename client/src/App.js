@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -6,14 +6,15 @@ import DashboardPage from "./pages/Dashboard/DashboardPage";
 import LandingPage from "./pages/Landing/LandingPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import SignupPage from "./pages/Signup/SignupPage";
-import PasswordResetPage from "./pages/Password-Reset/PasswordResetPage"
+import PasswordResetPage from "./pages/Password-Reset/PasswordResetPage";
 
 require("dotenv").config();
 
 // firebase auth
 class App extends Component {
 	render() {
-		const user = null;
+		///userprovider component wrapper to be added
+		const user = useContext(UserContext);
 		return user ? (
 			<DashboardPage />
 		) : (
