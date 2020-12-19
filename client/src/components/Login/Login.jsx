@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
@@ -57,9 +57,7 @@ const Login = () => {
 					/>
 				</form>
 				<p>or</p>
-				<Button className={styles.googlebtn}>
-					Sign in with Google
-				</Button>
+				<Button className={styles.googlebtn} text="Sign in With Google" />
 				<p>
 					Don't have an account?{" "}
 					<Link to="signUp" className={styles.signuplink}>

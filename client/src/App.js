@@ -11,26 +11,25 @@ import PasswordResetPage from "./pages/Password-Reset/PasswordResetPage";
 require("dotenv").config();
 
 // firebase auth
-class App extends Component {
-	render() {
-		///userprovider component wrapper to be added
-		const user = useContext(UserContext);
-		return user ? (
-			<DashboardPage />
-		) : (
-			<Router>
-				<Switch>
-					<>
-						<Route exact path="/" component={LandingPage} />
-						<Route exact path="/dashboard" component={DashboardPage} />
-						<Route exact path="/profile" component={ProfilePage} />
-						<Route exact path="/signup" component={SignupPage} />
-						<Route exact path="/password-reset" component={PasswordResetPage} />
-					</>
-				</Switch>
-			</Router>
-		);
-	}
-}
+const App = () => {
+	///userprovider component wrapper to be added
+	// const user = useContext(UserContext);
+	const user = null;
+	return user ? (
+		<DashboardPage />
+	) : (
+		<Router>
+			<Switch>
+				<>
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/dashboard" component={DashboardPage} />
+					<Route exact path="/profile" component={ProfilePage} />
+					<Route exact path="/signup" component={SignupPage} />
+					<Route exact path="/password-reset" component={PasswordResetPage} />
+				</>
+			</Switch>
+		</Router>
+	);
+};
 
 export default App;
