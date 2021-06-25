@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "./password-reset.module.css"
 
 const PasswordReset = () => {
   const [email, setEmail] = useState("");
@@ -17,6 +18,23 @@ const PasswordReset = () => {
   return (
     <div>
       <h2>Reset your password!</h2>
+      <main>
+        <form action="">
+          {emailHasBeenSent && (
+            <div className={styles.notification} id="emailsentpop">
+              An email has been sent to you!
+            </div>
+          )}
+          {error !== null && (
+            <div className={styles.errors}>
+              {error}
+            </div>
+          )}
+          <label htmlFor="userEmail">
+            Email:
+          </label>
+        </form>
+      </main>
     </div>
   );
 };
